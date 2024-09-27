@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+            background-color: rgba(85, 46, 123, 0.741);
+            border: 6px solid black;
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        .box1{
+            border: 5px solid black;   
+            padding: 120px;   
+        }
+
+        .box1.col{
+            grid-column: span 2;
+        }
+
+        .box1.row{
+            grid-row: span 2;
+            
+        }
+
+        .box1:nth-child(1){background-color: rgb(184, 54, 6);}
+        .box1:nth-child(2){background-color: pink;}
+        .box1:nth-child(3){background-color: rgb(11, 50, 226);}
+        .box1:nth-child(4){background-color: rgb(121, 21, 21);}
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="box1 col">4</div>
+        <div class="box1 row">6</div>
+
+        <div class="box1">1</div>
+
+        <div class="box1">5</div>
+
+    </div>
+
+
+    
+</body>
+</html>
